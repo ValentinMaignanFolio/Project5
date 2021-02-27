@@ -1,0 +1,41 @@
+#product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 223, 226);
+    width:80%;
+    margin:auto;
+    margin-top :10rem;
+    margin-bottom: 10rem;
+    line-height: 4rem;
+    padding:5rem;
+}
+
+.product-photo{
+    width:60%;
+    min-height:200px;
+    object-fit: cover;
+    float: left;
+    margin-right: 3rem;
+}
+
+.personalized{
+    margin-top: 2rem;
+}
+
+#select-option{
+    height: 3rem;
+    width: 10rem;
+    font-family: "Roboto", sans-serif;
+    float: left;
+}
+
+.cart-btn{
+    height: 5rem;
+    width: 14rem;
+    background-color: blueviolet;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    float: right;
+    margin-right: 3rem;
+}

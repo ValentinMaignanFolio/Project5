@@ -1,0 +1,29 @@
+.homecontent{
+    background-image:url('fond-home.jpg');
+    background-size: cover;
+    height:100rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+       background-color: $primary-color;
+       border:solid 4px black;
+       border-radius: 50px;
+       width:25rem;
+       height:9rem;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       transition: all 1s;
+    } 
+    p:hover{
+        width:27rem;
+        height:11rem;
+        
+    
+    }
+    p a{
+        text-decoration: none;
+        color:black;
+    }
+}
