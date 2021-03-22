@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header">
+                <img src="images/logo.jpeg" alt="orinoco">
+                <nav class="navigation">
+                    <a href="home.html">Accueil</a>
+                    <a href="products.html">Produits</a>
+                    <img src="images/panier.png" alt="panier" id="panier">
+                    <a href="cart.html" class="cart">
+                        <ion-icon name="basket"></ion-icon>Panier<span>0</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="products-container">
+                <div class="product-header" id="product-header2">
+                    <h4 class="product-title">PRODUIT</h4>
+                    <h4 class="price" id="price">PRIX</h4>
+                    <h4 class="quantity">QUANTITE</h4>
+                    <h4 class="total">TOTAL</h4>
+                </div>
+                <div class="products-list">
+                </div>
+            </div>
+            <div class="orders"></div>
+            <div class="form">
+                <form id="validation">
+                    <div>
+                        <label for="emailinput">Email</label>
+                        <input type="email" name="email" id="emailinput" required>
+                    </div>
+                    <div>
+                        <label for="firstnameinput">Prénom</label>
+                        <input type="text" name="firstname" id="firstname" required>
+                    </div>
+                    <div>
+                        <label for="lastnameinput">Nom</label>
+                        <input type="text" name="lastname" id="lastname" required>
+                    </div>
+                    <div>
+                        <label for="adressinput">Adresse</label>
+                        <input type="text" name="adress" id="adress" required>
+                    </div>
+                    <div>
+                        <label for="postalcodeinput">Code postal</label>
+                        <input type="text" name="postalcode" id="postalcode" required>
+                    </div>
+                    <div>
+                        <input type="submit" value="Envoyer" id="send">
+                        <p id="error"></p>
+                    </div>
+                </form>
+            </div>
+            <a href="home.html" id="backlink">Retour Accueil</a>
+        </main>
+        <footer class="footer">
+            <div>
+                <img src="images/logo-ecrit.JPG" alt="logo_ornico">
+            </div>
+            <div class="reseaux">
+                <a href="">
+                    <img src="images/icone-facebook.png" alt="facebook">
+                </a>
+                <a href="">
+                    <img src="images/icone-instagram.png" alt="instagram">
+                </a>
+            </div>
+        </footer>
+    </div>
+<script src="product.js"></script>
+<script src="cart.js"></script>
+
+</body>
+</html>
