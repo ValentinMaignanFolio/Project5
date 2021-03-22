@@ -1,5 +1,6 @@
 
-// Construction des div camera
+
+// Construction de la liste de produits //
 
 function cameraTemplate(camera){
     return `
@@ -17,23 +18,12 @@ function cameraTemplate(camera){
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const cameras = await(await fetch('http://localhost:3000/api/cameras')).json()
-        console.log(cameras)
         document.getElementById('productslist').innerHTML = `
         ${cameras.map(cameraTemplate).join('')}`
     } catch (error) {
         console.warn("error")
     }
 })
-
-
-// FICHE PRODUIT INDIVIDUEL
-
-// Ajouter un event 'click' sur le p de classe validate-link
-// Au clic récupérer les infos de la div et les afficher + faire disparaitre les autres éléments de la page
-// Au clic générer une nouvelle url intégrant l'id 
-// Ajouter des options de personnalisation des lentilles avec l'utilisation d'un array
-// Au clic sur ajouter --> passer les éléments en localStorage + incrémenter le panier
-// Prévoir un lien de retour vers la page de présentation des produits
 
 
 

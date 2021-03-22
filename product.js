@@ -2,20 +2,19 @@
 
 const USP= new URLSearchParams(location.search)
 let id = USP.get('id');
-console.log(id);
 
 
+//------------------Construction des fiches produits------------------------//
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const prod = await(await fetch('http://localhost:3000/api/cameras/'+ id)).json()
-        console.log(prod)
         document.getElementById('product').innerHTML = 
         `
         <div class="product-camera">
         <img class="product-photo" src="${prod.imageUrl}">
         <h2 class="product-name">${prod.name}</h2>
-        <h3 class="product-price">${prod.price/100 + ' ' + '€'}</h3>
+        <h3 class="product-price">${prod.price/100},00€</h3>
         <p class="product-description">${prod.description}</p>
         <form class="personalized">
             <select id="select-option">
@@ -41,12 +40,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 productNumbers(cart);
                 totalPrice(cart);
             })
-        }      
+        }  
+       
     } catch (error) {
-        console.warn(error)
+        console.warn("error")
     }
 })
 
+//-----------------Affichage du nombre d'articles dans le panier-------//
 
 function productAddedNumbers(){
     let productAdded = localStorage.getItem('productNumbers');
@@ -55,19 +56,29 @@ function productAddedNumbers(){
     }
 }
 
-function productNumbers(cart){
+//-----------------Incrémentation et décrémentation------------------//
+
+function productNumbers(cart, action){
     let productAdded = localStorage.getItem('productNumbers');
     productAdded = parseInt(productAdded);
+    let productsAdded = localStorage.getItem('productsAdded');
+    productsAdded = JSON.parse(productsAdded);
 
-    if(productAdded){
-        localStorage.setItem('productNumbers', productAdded + 1);
+    if(action == "minus"){
+        localStorage.setItem('productNumbers', productAdded - 1);
+        document.querySelector('.cart').textContent = productAdded - 1;
+    }else if(productAdded){
+        localStorage.setItem('productNumbers', productAdded + 1)
         document.querySelector('.cart').textContent = productAdded + 1;
-    } else {
+    }else{
         localStorage.setItem('productNumbers', 1);
         document.querySelector('.cart').textContent = 1;
     }
+
     setItems(cart);
 }
+
+//----------------------------Incrémentation des quantités par produit-------------------------//
 
 function setItems(cart){
     let cartItems = localStorage.getItem('productsAdded');
@@ -91,15 +102,25 @@ function setItems(cart){
     localStorage.setItem("productsAdded", JSON.stringify(cartItems));
 }
 
-function totalPrice(cart){
+//-----------------------------CALCUL DU PRIX TOTAL / LOCALSTORAGE----------------------//
+
+function totalPrice(cart, action){
     let cartCost = localStorage.getItem('totalPrice');
     
-    if(cartCost != null){
+    if(action == "minus"){
         cartCost = parseInt(cartCost);
-        localStorage.setItem("totalPrice", cartCost + cart.price + "€");
+        localStorage.setItem('totalPrice', cartCost - cart.price);
+    }else if(cartCost != null){
+        cartCost = parseInt(cartCost);
+        localStorage.setItem("totalPrice", cartCost + cart.price);
     }else{
         localStorage.setItem("totalPrice", cart.price);
     }
 }
 
 productAddedNumbers();
+
+
+
+
+ 
