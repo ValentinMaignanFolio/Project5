@@ -1,3 +1,7 @@
+#productslist{
+    margin-top: 7rem;
+}
+
 #product{
     display: flex;
     justify-content: center;
@@ -28,14 +32,141 @@
     width: 10rem;
     font-family: "Roboto", sans-serif;
     float: left;
+    margin-right: 2rem;
 }
 
 .cart-btn{
     height: 5rem;
     width: 14rem;
     background-color: blueviolet;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Pangolin', sans-serif;
     color: white;
     float: right;
-    margin-right: 3rem;
+    transition: all 1s ease;
+}
+
+.cart-btn:hover{
+    border:white 3px solid;
+    color: blueviolet;
+    background-color: rgb(243, 207, 241);
+    border:solid blueviolet;
+    cursor:pointer;
+}
+
+.validate-link{
+    a{
+        color: white;
+        text-decoration: none;
+        background-color: blueviolet;
+        padding:1.5rem 4rem;
+        margin-top: 2rem;
+        float: right;
+        margin-top: 8rem;
+        transition: all 1s ease;
+
+    }
+    a:hover{
+        padding:1.5rem 4rem;
+        border:white 3px solid;
+        color: blueviolet;
+        background-color: rgb(243, 207, 241);
+        border:solid blueviolet;
+        cursor:pointer;
+    }
+}
+
+.camera-photo{
+    float: left;
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.camera-description{
+    margin-bottom: 3rem;
+}
+
+.product{
+    border-radius: 1rem;
+}
+
+@media screen and (max-width: 600px){
+    .product{
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:0px;
+        padding-bottom: 2rem;
+       
+        img{
+            width: 100%;
+            object-fit: cover;
+            position: center;
+            margin-bottom: 2rem;
+        }
+
+    }
+    #productslist{
+        width: 100%;
+        margin: 0px;
+        margin-top: 7rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .camera-description{
+        display: none;
+    }
+    .camera-photo{
+        margin:0px;
+    }
+    .validate-link{
+        display: block;
+        background-color: blueviolet;
+        padding:1.5rem 4rem;
+        a{
+            color: white;
+            text-decoration: none;
+            padding:0px;
+            margin: 0px;
+        }
+    }
+}
+
+
+@media (max-width: 980px) and (min-width: 275px){
+    #product{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: rgb(240, 223, 226);
+        width:80%;
+        margin:auto;
+        margin-top :10rem;
+        margin-bottom: 10rem;
+        line-height: 3rem;
+        padding:2rem;
+        .product-photo{
+            width:100%;
+          
+            object-fit: cover;
+            float: left;
+            margin-right: 3rem;
+            margin-bottom: 3rem;
+        }
+        .cart-btn{
+            display: block;
+            float: left;
+        }
+        .select-option{
+            display: block;
+            margin-right: 100%;
+        }
+    }
 }

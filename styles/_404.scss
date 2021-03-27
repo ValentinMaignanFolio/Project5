@@ -1,0 +1,40 @@
+.erreur{
+    width:100%;
+    height:600px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img{
+        width:250px;
+        height:auto;
+        margin-bottom: 3rem;
+    }
+    .backhome{
+        background: rgb(148, 84, 185);
+        transition: all 1s ease;
+        font-size:1.8rem;
+        margin-top:3rem;
+        padding:2rem;
+        border:rgb(148, 84, 185) 3px solid;
+    }
+    .backhome:hover{
+        border:rgb(49, 48, 48) 3px solid;
+        cursor:pointer;
+        width:27rem;
+    }
+    a{
+        color:white;
+        text-decoration: none;
+        font-size: 1.8rem;
+        transition: all 1s;
+    }
+    a:hover{
+        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+}
+
+
+    

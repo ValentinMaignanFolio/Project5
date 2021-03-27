@@ -14,3 +14,12 @@
 .reseaux img{
     width:40px;
 }
+
+@media (max-width: 600px) and (min-width: 200px){
+    .footer img{
+        width:140px;
+    }
+    .reseaux img{
+        width:30px;
+    }
+}

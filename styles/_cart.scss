@@ -1,13 +1,16 @@
 *{
     font-family: 'Pangolin', sans-serif;
     font-size: 1.5rem;
+    box-sizing: border-box;
+    
 }
 
 .products-container{
     max-width: 650px;
     justify-content: space-around;
-    margin: 0 auto;
+    margin: auto;
     margin-top: 3rem;
+    padding: auto;
 }
 
 .product-header{
@@ -45,6 +48,7 @@
 .cart-images{
     width: 15rem;
     margin-right:1rem;
+    border-radius: 1rem;
 }
 
 .products-list{
@@ -68,6 +72,10 @@
         margin-right: 1rem;
     }
     
+}
+
+.second-trash{
+    display: none;
 }
 
 .products-price{
@@ -141,6 +149,8 @@
         }
         label{
             font-size:1.7rem;
+            color: white;
+            font-weight: 800;
         }
     }
 }
@@ -166,12 +176,20 @@
 }
 
 .orders{
-    display: block;
+    display: none;
     text-align: center;
     font-weight: bold;
     line-height: 4rem !important;
+    margin: 4em;
+    color: black;
+    padding-top: 5rem;
+    
     p{
         font-size: 2.5rem !important;
+        line-height: 2.5;
+    }
+    #confirmation{
+        color: rgb(211, 56, 141) !important;
     }
 }
 
@@ -198,3 +216,118 @@
     border:solid 4px rgb(218, 29, 170);
 }
 
+@media (max-width: 700px) and (min-width: 275px){
+    
+    .product-header{
+        display: none;
+    }
+    .products-list{
+        flex-direction: column;
+        justify-content: center;
+        .products-cart{
+            border:none;
+            width: 100%;
+            justify-content: center;
+            flex-direction: column;
+            padding-bottom: 0px;
+
+            span{
+                margin-top: 2rem;
+                display: block;
+                font-size: 2.5rem;
+                width: 80%;
+                margin: auto;
+                padding:2rem;
+                text-align: center;
+                background-color: white;
+            }
+            .cart-images{
+                width: 80%;
+                margin: 0px;
+                border-top-left-radius: 2rem;
+                border-top-right-radius: 2rem;
+            }
+        }
+        .products-price{
+            border:none;
+            width:80%;
+            color: white;
+            margin: auto;
+            background-color: #9454b9;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+        .products-price::before{
+            content: 'Prix :';
+            margin-right: 1rem;
+            font-weight: 800;
+        }
+        .products-quantity{
+            border:none;
+            width: 80%;
+            justify-content: center;
+            background-color: #9454b9;
+            margin: auto;
+            color: white;
+            span{
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+        }
+        .total-price{
+            border:none;
+            width: 80%;
+            margin: auto;
+            justify-content: center;
+            color: white;
+            margin-bottom: 8rem;
+            background-color: #9454b9;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+        .total-price::before{
+            content: 'Total article :';
+            margin-right: 1rem;
+            font-weight: 800;
+        }
+        .second-trash{
+            width: 80%;
+            margin:auto;
+            display: block;
+            text-align: center;
+            color: rgb(3, 3, 3);
+            padding: 1rem;
+            background-color:#f3e9f1;
+            margin-bottom: 3rem;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            
+        }
+        .second-trash::after{
+            content : 'Effacer ma commande';
+            margin-left: 2rem;
+            font-family: 'Pangolin', sans-serif;
+        }
+        .first-trash{
+            display: none;
+        }
+        .main-total{
+            width: 80%;
+            margin:auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 4rem;
+            border-bottom: 2px solid black;
+            .total-price-container{
+                display: block;
+                text-align: center;
+                font-size: 2.2rem;
+            }
+            .totalEuro{
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    p{
+    div{
        background-color: $primary-color;
        border:solid 4px black;
        border-radius: 50px;
@@ -14,16 +14,26 @@
        display: flex;
        justify-content: center;
        align-items: center;
-       transition: all 1s;
+       transition: all 1s ease;
     } 
-    p:hover{
+    div:hover{
         width:27rem;
         height:11rem;
+        border:solid 4px rgb(218, 29, 170);
         
     
     }
-    p a{
+    a{
         text-decoration: none;
         color:black;
+        p{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media (max-width: 400px) and (min-width: 200px){
+    .homecontent{
+        height:60rem;
     }
 }
