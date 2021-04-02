@@ -288,6 +288,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   background-color: #f0dfe2;
+  border-radius: 1rem;
   width: 80%;
   margin: auto;
   margin-top: 10rem;
@@ -303,6 +304,7 @@ p {
      object-fit: cover;
   float: left;
   margin-right: 3rem;
+  border-radius: 1rem;
 }
 
 .personalized {
@@ -695,7 +697,7 @@ p {
 
 .form div label {
   font-size: 1.7rem;
-  color: white;
+  color: black;
   font-weight: 800;
 }
 
@@ -938,9 +940,8 @@ p {
 }
 
 .erreur .backhome:hover {
-  border: #313030 3px solid;
+  border: white 3px solid;
   cursor: pointer;
-  width: 27rem;
 }
 
 .erreur a {
