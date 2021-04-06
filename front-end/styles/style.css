@@ -901,6 +901,9 @@ p {
     display: block;
     text-align: center;
   }
+  .products-list .orders p {
+    font-size: 1.6rem !important;
+  }
 }
 
 .erreur {

@@ -48,7 +48,7 @@ function productPageCreation(){
                 </select>
             </form>
             <button class="cart-btn">Ajouter au panier</button>
-            </div>;`
+            </div>`
             let count=0;
             const cart = {
                 name : prod.name,
