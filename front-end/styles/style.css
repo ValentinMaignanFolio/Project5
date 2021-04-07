@@ -214,7 +214,6 @@ p {
   background-color: white;
   background-image: url("ciel-degrade.jpg");
   background-size: cover;
-  background-image: 0.8;
   z-index: 1;
 }
 
@@ -495,7 +494,6 @@ p {
       justify-content: space-around;
   margin: auto;
   margin-top: 3rem;
-  padding: auto;
 }
 
 .product-header {
@@ -568,9 +566,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-around, flex-start;
-      -ms-flex-pack: space-around, flex-start;
-          justify-content: space-around, flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 0;
   padding: 10px 0;
   border-bottom: 3px solid #9454b9;
@@ -956,7 +953,6 @@ p {
 }
 
 .erreur a:hover {
-  font-size: 2rem;
   font-size: 2.2rem;
 }
 /*# sourceMappingURL=style.css.map */
