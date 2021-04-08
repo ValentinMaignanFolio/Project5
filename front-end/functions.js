@@ -17,7 +17,7 @@ function cameraTemplate(camera){
 function productsListCreation(){
     document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const cameras = await(await fetch('https://projet-orinoco.herokuapp.com/api/cameras')).json()
+        const cameras = await(await fetch('https://ab-p5-api.herokuapp.com/api/cameras/')).json()
         document.getElementById('productslist').innerHTML = `
         ${cameras.map(cameraTemplate).join('')}`
     } catch (error) {
@@ -33,7 +33,7 @@ function productsListCreation(){
 function productPageCreation(){
         document.addEventListener('DOMContentLoaded', async () => {
         try {
-            const prod = await(await fetch('https://projet-orinoco.herokuapp.com/api/cameras/'+ id)).json()
+            const prod = await(await fetch('https://ab-p5-api.herokuapp.com/api/cameras/'+ id)).json()
             document.getElementById('product').innerHTML = 
             `
             <div class="product-camera">
@@ -344,7 +344,7 @@ function submitForm(){
                     'Content-Type': 'application/json'
                 }
             }
-            fetch("https://projet-orinoco.herokuapp.com/api/cameras/order", requestOptions)
+            fetch("https://ab-p5-api.herokuapp.com/api/cameras/order", requestOptions)
                 .then(res => {
                     console.log(res);
                     return res.json();
